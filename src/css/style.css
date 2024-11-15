@@ -551,6 +551,7 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
   gap: 1.875rem;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 12.5rem;
@@ -614,8 +615,8 @@ textarea {
 @media (max-width: 47.99875rem) {
   .nav__item {
     right: -100%;
-    -webkit-animation: menu 1s ease forwards;
-            animation: menu 1s ease forwards;
+    -webkit-animation: menu 0.8s ease forwards;
+            animation: menu 0.8s ease forwards;
   }
   @-webkit-keyframes menu {
     0% {

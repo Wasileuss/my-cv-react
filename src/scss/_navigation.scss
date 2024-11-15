@@ -5,6 +5,7 @@
         
     &__list {
         display: flex;
+        overflow: hidden;
         gap: toRem(30);
         flex: 0 1 toRem(200);
 
@@ -50,7 +51,7 @@
 
         @media (max-width: toRem(767.98)) {
             right: -100%;
-            animation: menu 1s ease forwards;
+            animation: menu 0.8s ease forwards;
 
             @keyframes menu {
                 0% {
