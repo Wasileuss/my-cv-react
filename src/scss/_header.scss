@@ -1,0 +1,78 @@
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: toRem(3) solid #0071a1;
+    // backdrop-filter: blur(2px);
+    z-index: 5;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: toRem(5) 0;
+    }
+
+    &__logo {
+        position: relative;
+        max-width: toRem(80);
+        width: 100%;
+        aspect-ratio: 140 / 120;
+        z-index: 5;
+
+        @media (max-width: toRem(767.98)) {
+            max-width: toRem(70);
+        }
+    }
+}
+
+//Burger Icon
+.icon-menu {
+	display: none;
+	@media (max-width: toEm(767.98)) {
+		display: block;
+		position: relative;
+		width: toRem(30);
+		height: toRem(18);
+		z-index: 5;
+		@media (any-hover: none) {
+			cursor: default;
+		}
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: toRem(4);
+            border-radius: toRem(2);
+			background-color: #f7f7f7;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: toRem(-2);
+		}
+		span {
+			top: calc(50% - toRem(1));
+		}
+		&.menu-open  {
+			span {
+				width: 0;
+			}
+			&::before {
+				top: calc(50% - toRem(2));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - toRem(2));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}

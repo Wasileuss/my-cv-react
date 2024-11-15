@@ -1,0 +1,85 @@
+.courses {
+
+    // &__title {
+    // }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(toRem(300), 1fr));
+        gap: toRem(20);
+    }
+
+    &__item {
+        display: grid;
+        gap: toRem(50);
+        color: #00c191;
+        border: toRem(1) solid #ffffff;
+        border-radius: toRem(10);
+        padding: toRem(10) toRem(20);
+    }
+
+    &__content {
+        display: grid;
+        gap: toRem(30);
+    }
+
+    &__name {
+        font-size: toRem(30);
+        font-weight: 700;
+    }
+
+    &__school {
+        font-size: toRem(24);
+        font-weight: 900;
+        color: #6b77e5;
+    }
+
+    &__info {
+        display: grid;
+        gap: toRem(10);
+        justify-items: end;
+        align-self: end;
+        justify-self: end;
+    }
+
+    &__period {
+        font-size: toRem(16);
+    }
+
+    &__link {
+        font-size: toRem(20);
+        color: #D06B00;
+        position: relative;
+        padding: toRem(5) toRem(10);
+        margin-right: toRem(-10);
+        z-index: 1;
+        transition: color .3s easy-in-out;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: #c7c7c7;
+            }
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            inset: 0 0 0 0;
+            background: #62b6e07d;
+            border-radius: toRem(5);
+            z-index: -1;
+            transition: transform .3s ease;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+        }
+
+        @media (any-hover: hover) {
+            &:hover::before {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+        }
+    }
+}

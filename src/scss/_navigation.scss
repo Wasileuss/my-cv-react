@@ -1,0 +1,99 @@
+.nav {
+    position: relative;
+    transition: all 0.3s ease;
+    overflow-y: initial;
+        
+    &__list {
+        display: flex;
+        gap: toRem(30);
+        flex: 0 1 toRem(200);
+
+        @media (max-width: toRem(767.98)) {
+            gap: toRem(40);
+            padding-top: toRem(30);
+            padding-bottom: toRem(70);
+            flex-direction: column;
+            align-items: flex-end;
+            overflow-y: auto;
+        }
+    }
+
+    &__item {
+        position: relative;
+        
+        @media (any-hover: hover) {
+            &:hover {
+                .nav__link {
+                    color: #6b77e5;
+                    transform: translateY(5px);
+                }
+            }
+            
+        }
+        @media (min-width: toRem(767.98)) {
+            top: toRem(-100);
+            animation-name: menu;
+            animation-duration: 1s;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+
+            @keyframes menu {
+                0% {
+                    top: toRem(-100);
+                }
+                100% {
+                    top: toRem(0);
+                }
+                
+            }
+        }
+
+        @media (max-width: toRem(767.98)) {
+            right: -100%;
+            animation: menu 1s ease forwards;
+
+            @keyframes menu {
+                0% {
+                    right: -100%;
+                }
+                100% {
+                    right: 0;
+                }
+                
+            }
+        }
+    }
+
+    &__link {
+        font-size: toRem(24);
+        font-weight: 900;
+        text-transform: uppercase;
+        color: #00c191;
+        transition: all 0.3s ease;
+
+        &.active {
+            color: #D06B00;
+        }
+
+        @media (max-width: toRem(767.98)) {
+            font-size: toRem(36);
+        }
+    }
+
+    @media (max-width: toRem(767.98)) {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        top: -100%;
+        background: transparent;
+        z-index: 2;
+        padding: toRem(30) toRem(15);
+        margin-left: toRem(-15);
+        transition: top 0.3s ease-in-out;
+
+        &.active {
+            top: toRem(70);
+        }
+    }
+}
