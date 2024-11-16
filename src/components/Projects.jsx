@@ -89,13 +89,13 @@ const Projects = () => {
         <div className="projects">
             <h2 className="projects__title title">My Projects</h2>
             {loading && <div id='load'>
-                            <div>G</div>
-                            <div>N</div>
-                            <div>I</div>
-                            <div>D</div>
-                            <div>A</div>
-                            <div>O</div>
                             <div>L</div>
+                            <div>O</div>
+                            <div>A</div>
+                            <div>D</div>
+                            <div>I</div>
+                            <div>N</div>
+                            <div>G</div>
                         </div>}
             <ul className={`projects__list ${loading ? 'hidden' : ''}`}>
                 {projects.map((item, idx) => (

@@ -16,7 +16,7 @@ const Home = () => {
                 <div className ="about__description">
                     <p>Aspiring Frontend Developer with a passion for creating
                     user-friendly and visually appealing web interfaces.</p>
-                    <p>Proficient in HTML, CSS, JavaScript, TypeScript, React, Next.js</p>
+                    <p>Proficient in HTML, CSS/SCSS, Tailwind, JavaScript, TypeScript, React.js, Next.js</p>
                     <p>QA skills.</p>
                     <p>Wordpress and PHP experience.</p>
                     <p>Strong problem-solving and debugging skills.</p>

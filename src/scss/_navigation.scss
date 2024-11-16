@@ -21,12 +21,13 @@
 
     &__item {
         position: relative;
+        padding: toRem(10) 0;
         
         @media (any-hover: hover) {
             &:hover {
                 .nav__link {
                     color: #6b77e5;
-                    transform: translateY(5px);
+                    transform: translateY(toRem(5));
                 }
             }
             

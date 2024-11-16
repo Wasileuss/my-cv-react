@@ -574,13 +574,14 @@ textarea {
 }
 .nav__item {
   position: relative;
+  padding: 0.625rem 0;
 }
 @media (any-hover: hover) {
   .nav__item:hover .nav__link {
     color: #6b77e5;
-    -webkit-transform: translateY(5px);
-        -ms-transform: translateY(5px);
-            transform: translateY(5px);
+    -webkit-transform: translateY(0.3125rem);
+        -ms-transform: translateY(0.3125rem);
+            transform: translateY(0.3125rem);
   }
 }
 @media (min-width: 47.99875rem) {
@@ -914,58 +915,64 @@ textarea {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
-  color: #fff;
+  color: #005741;
 }
 
 #load div:nth-child(2) {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
+  color: #D06B00;
 }
 
 #load div:nth-child(3) {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
+  color: #6d00b5;
 }
 
 #load div:nth-child(4) {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
+  color: #fff;
 }
 
 #load div:nth-child(5) {
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
+  color: #f00;
 }
 
 #load div:nth-child(6) {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
+  color: yellow;
 }
 
 #load div:nth-child(7) {
   -webkit-animation-delay: 1.2s;
           animation-delay: 1.2s;
+  color: #005741;
 }
 
 @-webkit-keyframes move {
   0% {
-    left: 0;
+    left: 100%;
     opacity: 0;
   }
   35% {
-    left: 41%;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    opacity: 1;
-  }
-  65% {
     left: 59%;
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
     opacity: 1;
   }
+  65% {
+    left: 41%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 1;
+  }
   100% {
-    left: 100%;
+    left: 0;
     -webkit-transform: rotate(-180deg);
             transform: rotate(-180deg);
     opacity: 0;
@@ -974,23 +981,23 @@ textarea {
 
 @keyframes move {
   0% {
-    left: 0;
+    left: 100%;
     opacity: 0;
   }
   35% {
-    left: 41%;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    opacity: 1;
-  }
-  65% {
     left: 59%;
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
     opacity: 1;
   }
+  65% {
+    left: 41%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 1;
+  }
   100% {
-    left: 100%;
+    left: 0;
     -webkit-transform: rotate(-180deg);
             transform: rotate(-180deg);
     opacity: 0;
