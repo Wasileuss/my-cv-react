@@ -763,6 +763,11 @@ textarea {
   gap: 1.875rem;
   justify-items: center;
 }
+.projects__item {
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
 .projects__link {
   display: grid;
   justify-items: center;
@@ -871,6 +876,10 @@ textarea {
   -webkit-transform-origin: bottom right;
       -ms-transform-origin: bottom right;
           transform-origin: bottom right;
+}
+.projects__technology {
+  line-height: 1.5;
+  text-align: center;
 }
 
 .projects__list.hidden {

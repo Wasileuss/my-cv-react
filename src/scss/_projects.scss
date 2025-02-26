@@ -8,8 +8,10 @@
         justify-items: center;
     }
 
-    // &__item {
-    // }
+    &__item {
+        display: grid;
+        align-content: center;
+    }
 
     &__link {
         display: grid;
@@ -112,6 +114,11 @@
             transform: scaleX(0);
             transform-origin: bottom right;
         }
+    }
+
+    &__technology {
+      line-height: 1.5;
+      text-align: center;
     }
 }
 

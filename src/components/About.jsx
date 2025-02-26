@@ -21,7 +21,13 @@ const Home = () => {
                     <p>Wordpress and PHP experience.</p>
                     <p>Strong problem-solving and debugging skills.</p>
                 </div>
-                <button type="button" className="about__button" onClick={() => window.open('https://drive.google.com/file/d/1kpnzbDHd7L5sF0QbP-iVLThK_f0yHZua/view?usp=sharing', '_blank')}>Download CV</button>
+                <button
+                  type="button"
+                  className="about__button"
+                  onClick={() => window.open('https://drive.google.com/file/d/1bb1krPJ4EBLwRDunWgb_VVBCHOOQswoF/view?usp=sharing', '_blank')}
+                >
+                  Download CV
+                </button>
             </div>
         </div>
     );

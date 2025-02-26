@@ -19,9 +19,10 @@ const EmailForm = () => {
     });
 
     const onSubmit = (values, { setSubmitting, resetForm }) => {
-        const serviceId = 'service_df6bt1f';
-        const templateId = 'template_eqbgntm';
-        const userId = 'U0kLXolpkXV3kjKMk';
+      const serviceId = process.env.REACT_APP_SERVICE_ID;
+      const templateId = process.env.REACT_APP_TEMPLATE_ID;
+      const userId = process.env.REACT_APP_USER_ID;
+      
 
         emailjs.send(serviceId, templateId, values, userId)
         .then((response) => {
@@ -31,14 +32,14 @@ const EmailForm = () => {
 
             setTimeout(() => {
                 setStatusMessage(null);
-            }, 10000);
+            }, 5000);
         }, (error) => {
             console.log('FAILED...', error);
             setStatusMessage('Failed to send message. Please try again later.');
 
             setTimeout(() => {
                 setStatusMessage(null);
-            }, 10000);
+            }, 5000);
         })
         .finally(() => {
             setSubmitting(false);

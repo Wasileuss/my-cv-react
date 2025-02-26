@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import linkedin from '../assets/icons/linkedin.svg';
 import github from '../assets/icons/github.svg';
-import facebook from '../assets/icons/facebook.svg';
+// import facebook from '../assets/icons/facebook.svg';
 import instagram from '../assets/icons/instagram.svg';
 import upwork from '../assets/icons/upwork.svg';
 
@@ -14,10 +14,10 @@ function Footer() {
                     <Link className='sidebar__link' to="https://www.linkedin.com/in/vasyl-bezkorovainyi-ukraine/" target="_blank" rel="noreferrer">
                         <img src={linkedin} alt="Linkedin logo" />
                     </Link>
-                    <Link className='sidebar__link' to="https://www.facebook.com/wasyl.bezkorowainyi" target="_blank" rel="noreferrer">
+                    {/* <Link className='sidebar__link' to="https://www.facebook.com/wasyl.bezkorowainyi" target="_blank" rel="noreferrer">
                         <img src={facebook} alt="Facebook logo" />
-                    </Link>
-                    <Link className='sidebar__link' to="https://www.instagram.com/wasyl.lviv/" target="_blank" rel="noreferrer">
+                    </Link> */}
+                    <Link className='sidebar__link' to="https://www.instagram.com/webuimaster/" target="_blank" rel="noreferrer">
                         <img src={instagram} alt="Instagram logo" />
                     </Link>
                     <Link className='sidebar__link' to="https://github.com/Wasileuss/" target="_blank" rel="noreferrer">

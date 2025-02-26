@@ -1,7 +1,7 @@
 [
     {
         "title": "Bacon Pub",
-        "technology": "HTML, Tailwind, Next, Typescript, Firebase, Cloudinary",
+        "technology": "HTML, SCSS, JavaScript, Wordpress",
         "href": "https://pub-bacon-lviv.vercel.app/",
         "target": "_blank",
         "rel": "noopener noreferrer",
