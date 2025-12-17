@@ -144,78 +144,79 @@
 }
 
 #load {
-    font-size:2rem;
-    position:relative;
-    top:40%;
-    left:0;
-    right:0;
-    bottom:0;
-    margin:auto;
-    text-align:center;
-    max-width:600px;
-    overflow:visible;
-    user-select:none;
-    cursor:default
+    width: 100%;
+    font-size: 32px;
+    position: relative;
+    top: 40%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    max-width: 600px;
+    overflow: visible;
+    user-select: none;
+    cursor: default
 }
 
 #load div {
-    position:absolute;
-    width:20px;
-    height:36px;
-    opacity:0;
-    animation:move 2s linear infinite;
-    transform:rotate(180deg);
-    color:$clGreen
+    position: absolute;
+    width: 20px;
+    height: 36px;
+    opacity: 0;
+    animation: move 2s linear infinite;
+    transform: rotate(180deg);
+    color: $clGreen
 }
 
 #load div:nth-child(2) {
-    animation-delay:0.2s;
-    color:#D06B00
+    animation-delay: 0.2s;
+    color: #D06B00
 }
 
 #load div:nth-child(3) {
-    animation-delay:0.4s;
-    color:$clBlue
+    animation-delay: 0.4s;
+    color: $clBlue
 }
 
 #load div:nth-child(4) {
-    animation-delay:0.6s;
-    color:$clWhite
+    animation-delay: 0.6s;
+    color: $clWhite
 }
 
 #load div:nth-child(5) {
-    animation-delay:0.8s;
-    color:$clRed
+    animation-delay: 0.8s;
+    color: $clRed
 }
 
 #load div:nth-child(6) {
-    animation-delay:1s;
-    color:yellow
+    animation-delay: 1s;
+    color: yellow
 }
 
 #load div:nth-child(7) {
-    animation-delay:1.2s;
-    color:$clGreen
+    animation-delay: 1.2s;
+    color: $clGreen
 }
 
 @keyframes move {
     0% {
-        left:100%;
-        opacity:0
+        left: 100%;
+        opacity: 0
     }
     35% {
-        left:59%;
-        transform:rotate(0deg);
-        opacity:1
+        left: 60%;
+        transform: rotate(0deg);
+        opacity: 1
     }
     65% {
-        left:41%;
-        transform:rotate(0deg);
-        opacity:1
+        left: 40%;
+        transform: rotate(0deg);
+        opacity: 1
     }
     100% {
-        left:0;
-        transform:rotate(-180deg);
-        opacity:0
+        left: 0;
+        transform: rotate(-180deg);
+        opacity: 0
     }
 }

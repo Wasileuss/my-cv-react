@@ -930,7 +930,8 @@ textarea {
 }
 
 #load {
-  font-size: 2rem;
+  width: 100%;
+  font-size: 32px;
   position: relative;
   top: 40%;
   left: 0;
@@ -1002,13 +1003,13 @@ textarea {
     opacity: 0;
   }
   35% {
-    left: 59%;
+    left: 60%;
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
     opacity: 1;
   }
   65% {
-    left: 41%;
+    left: 40%;
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
     opacity: 1;
@@ -1027,13 +1028,13 @@ textarea {
     opacity: 0;
   }
   35% {
-    left: 59%;
+    left: 60%;
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
     opacity: 1;
   }
   65% {
-    left: 41%;
+    left: 40%;
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
     opacity: 1;
