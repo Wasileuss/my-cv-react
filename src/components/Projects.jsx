@@ -1,77 +1,169 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { gsap } from 'gsap';
 import projects from '../data/projects.json';
 import { Link } from 'react-router-dom';
 
-const getImagePath = (filename) => require(`../assets/images/portfolio/${filename}`);
+const getImagePath = (filename) =>
+  require(`../assets/images/portfolio/${filename}`);
 
 const Projects = () => {
-    const [loading, setLoading] = useState(true); // Стан завантаження
-    const [loadedCount, setLoadedCount] = useState(0); // Лічильник завантажених зображень
-    const totalImages = projects.length * 3; // Загальна кількість зображень (PC, tablet, mobile)
+const cardsRef = useRef([]);
+const [loading, setLoading] = useState(true);
+const [loadedCount, setLoadedCount] = useState(0);
+const totalImages = projects.length * 3;
 
-    // Оновлення лічильника при завантаженні кожного зображення
-    const handleImageLoad = () => {
-        setLoadedCount((prev) => prev + 1);
+const handleImageLoad = () => {
+    setLoadedCount((prev) => prev + 1);
+};
+
+useEffect(() => {
+    if (loadedCount === totalImages) {
+    setLoading(false);
+    }
+}, [loadedCount, totalImages]);
+
+useEffect(() => {
+    if (loading) return;
+
+    const cleanups = [];
+
+    cardsRef.current.forEach((container) => {
+    if (!container) return;
+
+    const body = container.querySelector('.card-body');
+    const items = container.querySelectorAll('.card-item');
+
+    gsap.set(container, {
+        transformStyle: 'preserve-3d',
+        perspective: 1200
+    });
+
+    gsap.set(body, {
+        transformStyle: 'preserve-3d',
+        rotationX: 0,
+        rotationY: 0
+    });
+
+    gsap.set(items, {
+        transformStyle: 'preserve-3d',
+        z: 0
+    });
+
+    const onEnter = () => {
+        gsap.to(items, {
+        z: (i, el) => parseFloat(el.dataset.translateZ) || 0,
+        duration: 0.5,
+        ease: 'power2.out',
+        stagger: 0.05
+        });
     };
 
-    // Якщо всі зображення завантажені, оновлюємо стан
-    if (loadedCount === totalImages && loading) {
-        setLoading(false);
-    }
+    const onMove = (e) => {
+        const rect = container.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
 
-    return (
-        <div className="projects">
-            <h2 className="projects__title title">My Projects</h2>
-            {loading && <div id='load'>
-                            <div>L</div>
-                            <div>O</div>
-                            <div>A</div>
-                            <div>D</div>
-                            <div>I</div>
-                            <div>N</div>
-                            <div>G</div>
-                        </div>}
-            <ul className={`projects__list ${loading ? 'hidden' : ''}`}>
-                {projects.map((item, idx) => (
-                    <li className="projects__item" key={idx}>
-                        <Link
-                            className="projects__link"
-                            to={item.href}
-                            target={item.target}
-                            rel={item.rel}
-                            aria-label={item.title}
-                        >
-                            <div className="projects__screens">
-                                <img
-                                    className="projects__pc"
-                                    src={getImagePath(item.pc)}
-                                    alt="PC view"
-                                    onLoad={handleImageLoad}
-                                    onError={() => console.error(`Error loading: ${item.pc}`)}
-                                />
-                                <img
-                                    className="projects__tablet"
-                                    src={getImagePath(item.tablet)}
-                                    alt="Tablet view"
-                                    onLoad={handleImageLoad}
-                                    onError={() => console.error(`Error loading: ${item.tablet}`)}
-                                />
-                                <img
-                                    className="projects__mobile"
-                                    src={getImagePath(item.mobile)}
-                                    alt="Mobile view"
-                                    onLoad={handleImageLoad}
-                                    onError={() => console.error(`Error loading: ${item.mobile}`)}
-                                />
-                            </div>
-                            <h3 className="projects__name">{item.title}</h3>
-                            <p className="projects__technology">{item.technology}</p>
-                        </Link>
-                    </li>
-                ))}
-            </ul>
+        const tiltX = ((e.clientY - centerY) / (rect.height / 2)) * -15;
+        const tiltY = ((e.clientX - centerX) / (rect.width / 2)) * 15;
+
+        gsap.to(body, {
+        rotationX: tiltX,
+        rotationY: tiltY,
+        duration: 0.3,
+        ease: 'power1.out'
+        });
+    };
+
+    const onLeave = () => {
+        gsap.to(body, {
+        rotationX: 0,
+        rotationY: 0,
+        duration: 0.5,
+        ease: 'power2.out'
+        });
+
+        gsap.to(items, {
+        z: 0,
+        duration: 0.5,
+        ease: 'power2.out'
+        });
+    };
+
+    container.addEventListener('mouseenter', onEnter);
+    container.addEventListener('mousemove', onMove);
+    container.addEventListener('mouseleave', onLeave);
+
+    cleanups.push(() => {
+        container.removeEventListener('mouseenter', onEnter);
+        container.removeEventListener('mousemove', onMove);
+        container.removeEventListener('mouseleave', onLeave);
+    });
+    });
+
+    return () => cleanups.forEach((fn) => fn());
+}, [loading]);
+
+return (
+    <div className="projects">
+    <h2 className="projects__title title">My Projects</h2>
+
+    {loading && (
+        <div id="load">
+        <div>L</div><div>O</div><div>A</div><div>D</div>
+        <div>I</div><div>N</div><div>G</div>
         </div>
-    );
+    )}
+
+    <ul className={`projects__list ${loading ? 'hidden' : ''}`}>
+        {projects.map((item, idx) => (
+        <li
+            className="projects__item card-container"
+            key={idx}
+            ref={(el) => (cardsRef.current[idx] = el)}
+        >
+            <Link
+            className="projects__link card-body"
+            to={item.href}
+            target={item.target}
+            rel={item.rel}
+            aria-label={item.title}
+            >
+            <div className="projects__screens card-item" data-translate-z="40">
+                <img
+                className="projects__tablet card-item"
+                src={getImagePath(item.tablet)}
+                alt="Tablet view"
+                onLoad={handleImageLoad}
+                data-translate-z="50"
+                />
+                <img
+                className="projects__mobile card-item"
+                src={getImagePath(item.mobile)}
+                alt="Mobile view"
+                onLoad={handleImageLoad}
+                data-translate-z="60"
+                />
+                <img
+                className="projects__pc card-item"
+                src={getImagePath(item.pc)}
+                alt="PC view"
+                onLoad={handleImageLoad}
+                data-translate-z="20"
+                />
+            </div>
+
+            <h3 className="projects__name card-item" data-translate-z="50">
+                {item.title}
+            </h3>
+            <p className="projects__technology card-item" data-translate-z="80">
+                {item.technology}
+            </p>
+            </Link>
+        </li>
+        ))}
+    </ul>
+    </div>
+);
 };
 
 export default Projects;

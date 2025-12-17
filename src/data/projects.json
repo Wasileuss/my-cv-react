@@ -1,5 +1,125 @@
 [
     {
+        "title": "CytoSite Bio",
+        "technology": "HTML, SCSS, JavaScript, GSAP, Lottie, Rive, Wordpress, ACF-blocks",
+        "href": "https://cytosite.webcomplete.io/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "pc": "pc-26.webp",
+        "tablet": "tablet-26.webp",
+        "mobile": "mobile-26.webp"
+    },
+    {
+        "title": "High Cadence Growth",
+        "technology": "HTML, SCSS, JavaScript, GSAP, Wordpress, ACF-blocks",
+        "href": "https://highcadencegrowth.webcomplete.io/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "pc": "pc-25.webp",
+        "tablet": "tablet-25.webp",
+        "mobile": "mobile-25.webp"
+    },
+    {
+        "title": "Fox & Hearn",
+        "technology": "HTML, SCSS, JavaScript, Wordpress, ACF-blocks",
+        "href": "https://foxhearn.webcomplete.io/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "pc": "pc-24.webp",
+        "tablet": "tablet-24.webp",
+        "mobile": "mobile-24.webp"
+    },
+    {
+        "title": "American PTAC Salers",
+        "technology": "HTML, SCSS, JavaScript, Wordpress, ACF-blocks",
+        "href": "https://americanptacwholesalers.webcomplete.io/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "pc": "pc-23.webp",
+        "tablet": "tablet-23.webp",
+        "mobile": "mobile-23.webp"
+    },
+    {
+        "title": "MASC Bermuda",
+        "technology": "HTML, SCSS, JavaScript, Wordpress, ACF-blocks",
+        "href": "https://masc.webcomplete.io/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "pc": "pc-22.webp",
+        "tablet": "tablet-22.webp",
+        "mobile": "mobile-22.webp"
+    },
+    {
+        "title": "Bermuda Chemist Warehouse",
+        "technology": "HTML, SCSS, JavaScript, Wordpress, ACF-blocks, WooCommerce(custom theme)",
+        "href": "https://bcw.webcomplete.io/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "pc": "pc-21.webp",
+        "tablet": "tablet-21.webp",
+        "mobile": "mobile-21.webp"
+    },
+    {
+        "title": "Alnaaim",
+        "technology": "HTML, SCSS, JavaScript, Wordpress, ACF-blocks",
+        "href": "https://alnaaim.webcomplete.io/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "pc": "pc-20.webp",
+        "tablet": "tablet-20.webp",
+        "mobile": "mobile-20.webp"
+    },
+    {
+        "title": "Studio TPE",
+        "technology": "HTML, SCSS, JavaScript, Wordpress, ACF-blocks",
+        "href": "https://studio-tpe.webcomplete.io/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "pc": "pc-19.webp",
+        "tablet": "tablet-19.webp",
+        "mobile": "mobile-19.webp"
+    },
+    {
+        "title": "Eagle Base",
+        "technology": "HTML, SCSS, JavaScript, Wordpress, ACF-blocks",
+        "href": "https://eaglec.webcomplete.io/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "pc": "pc-18.webp",
+        "tablet": "tablet-18.webp",
+        "mobile": "mobile-18.webp"
+    },
+    {
+        "title": "East Pictures",
+        "technology": "HTML, SCSS, JavaScript, Wordpress, ACF-blocks",
+        "href": "https://eastc.webcomplete.io/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "pc": "pc-17.webp",
+        "tablet": "tablet-17.webp",
+        "mobile": "mobile-17.webp"
+    },
+    {
+        "title": "Beyond Global",
+        "technology": "HTML, SCSS, JavaScript, Wordpress, ACF-blocks",
+        "href": "https://beyondglobal.webcomplete.io/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "pc": "pc-16.webp",
+        "tablet": "tablet-16.webp",
+        "mobile": "mobile-16.webp"
+    },
+    {
+        "title": "Technical Oasis",
+        "technology": "HTML, SCSS, JavaScript, Wordpress, ACF-blocks",
+        "href": "https://technicaloasis.webcomplete.io/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "pc": "pc-15.webp",
+        "tablet": "tablet-15.webp",
+        "mobile": "mobile-15.webp"
+    },
+    {
         "title": "Bacon Pub",
         "technology": "HTML, Tailwind, Next, Typescript, Firebase, Cloudinary",
         "href": "https://pub-bacon-lviv.vercel.app/",

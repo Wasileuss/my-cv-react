@@ -1,9 +1,16 @@
 .courses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    // &__title {
-    // }
+    &__title.title {
+        align-self: center;
+        text-align: center;
+        width: fit-content;
+    }
 
     &__list {
+        width: 100%;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(toRem(300), 1fr));
         gap: toRem(20);

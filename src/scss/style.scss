@@ -53,7 +53,7 @@ body {
 
     &__container {
         position: relative;
-        margin: toRem(15) auto;
+        margin: toRem(30) auto toRem(50);
         display: flex;
         gap: toRem(15);
         width: 100%;
