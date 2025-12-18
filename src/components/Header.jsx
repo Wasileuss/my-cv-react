@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import logo from '../assets/icons/logo_light.svg';
 import Navigation from './Navigation';
 
@@ -30,4 +30,3 @@ function Header() {
 }
 
 export default Header;
-

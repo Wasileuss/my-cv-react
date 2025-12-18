@@ -19,12 +19,14 @@
     }
 
     &__description {
+        width: 100%;
+        max-width: 700px;
 
         p {
             color: #e7e7e7;
-            @include adaptiveValue('font-size', 20, 16, 0, $containerWidth, 768);
             line-height: 1.5;
             text-align: center;
+            @include adaptiveValue('font-size', 20, 16, 0, $containerWidth, 768);
         }
 
         p:not(:last-child) {
@@ -39,7 +41,6 @@
 
     &__title {
         color: #ffffff;
-        @include adaptiveValue('font-size', 38, 20, 0, $containerWidth, 468);
         line-height: toRem(47);
         text-transform: uppercase;
         display: flex;
@@ -47,6 +48,7 @@
         justify-content: center;
         align-items: center;
         gap: toRem(10);
+        @include adaptiveValue('font-size', 38, 20, 0, $containerWidth, 468);
     }
 
     &__animation {

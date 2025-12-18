@@ -363,6 +363,10 @@ textarea {
   padding: 1.875rem 0;
   gap: 3.125rem;
 }
+.about__description {
+  width: 100%;
+  max-width: 700px;
+}
 .about__description p {
   color: #e7e7e7;
   line-height: 1.5;
@@ -808,16 +812,6 @@ textarea {
   color: #00c191;
   padding: 1.875rem 1.25rem;
 }
-@media (any-hover: hover) {
-  .projects__link:hover .projects__name::before {
-    -webkit-transform: scaleX(1);
-        -ms-transform: scaleX(1);
-            transform: scaleX(1);
-    -webkit-transform-origin: bottom left;
-        -ms-transform-origin: bottom left;
-            transform-origin: bottom left;
-  }
-}
 .projects__screens {
   width: 100%;
   position: relative;
@@ -906,6 +900,16 @@ textarea {
   -webkit-transform-origin: bottom right;
       -ms-transform-origin: bottom right;
           transform-origin: bottom right;
+}
+@media (any-hover: hover) {
+  .projects__name:hover::before {
+    -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: bottom left;
+        -ms-transform-origin: bottom left;
+            transform-origin: bottom left;
+  }
 }
 .projects__technology {
   width: 100%;

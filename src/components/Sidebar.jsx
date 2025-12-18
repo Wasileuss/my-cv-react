@@ -1,4 +1,3 @@
-import React from 'react';
 import contacts from '../data/contacts.json';
 import avatar from '../assets/images/photo.webp';
 import { LuSmartphone } from "react-icons/lu";

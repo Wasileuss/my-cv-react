@@ -24,18 +24,6 @@
         justify-items: center;
         color: #00c191;
         padding: toRem(30) toRem(20);
-
-        @media (any-hover: hover) {
-            &:hover {
-                .projects__name{
-                    &::before {
-                        transform: scaleX(1);
-                        transform-origin: bottom left;
-                    }
-                }
-            }
-        }
-
     }
 
     &__screens {
@@ -118,6 +106,15 @@
             transition: transform .3s ease;
             transform: scaleX(0);
             transform-origin: bottom right;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                &::before {
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
+            }
         }
     }
 

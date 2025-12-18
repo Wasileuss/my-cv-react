@@ -1,12 +1,9 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { navigation } from '../router/navigation';
-// import 'animate.css';
 
 const Navigation = ({ isMenuOpen, closeMenu }) => {
 
     const handleNavLinkClick = (e) => {
-        // Обробка кліку на посилання
         closeMenu();
     };
 
@@ -15,7 +12,7 @@ const Navigation = ({ isMenuOpen, closeMenu }) => {
             <ul className='nav__list'>
                 {navigation.map((el, index) => (
                     <li
-                        key={Math.random() * 100} // Використання індексу як ключа (краще використовувати унікальні значення, якщо доступні)
+                        key={Math.random() * 100}
                         className={`nav__item`}
                         style={{ animationDelay: `${index * 0.2}s` }}
                     >
@@ -30,4 +27,3 @@ const Navigation = ({ isMenuOpen, closeMenu }) => {
 };
 
 export default Navigation;
-                        // ${ shouldAnimate ? 'animate__animated animate__fadeInUp' : '' shouldAnimate, }
