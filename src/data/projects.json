@@ -1,8 +1,28 @@
 [
     {
+        "title": "Japonés a Fondo",
+        "technology": "HTML, SCSS, JavaScript, Wordpress, ACF-blocks, WooCommerce(custom theme), Polylang",
+        "href": "https://staging.japonafondotours.com/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "pc": "pc-28.webp",
+        "tablet": "tablet-28.webp",
+        "mobile": "mobile-28.webp"
+    },
+    {
+        "title": "Best AI Tools",
+        "technology": "HTML, SCSS, JavaScript, Wordpress, ACF-blocks",
+        "href": "https://bestaitools.ai/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "pc": "pc-27.webp",
+        "tablet": "tablet-27.webp",
+        "mobile": "mobile-27.webp"
+    },
+    {
         "title": "CytoSite Bio",
         "technology": "HTML, SCSS, JavaScript, GSAP, Lottie, Rive, Wordpress, ACF-blocks",
-        "href": "https://cytosite.webcomplete.io/",
+        "href": "https://cytositebio.com/",
         "target": "_blank",
         "rel": "noopener noreferrer",
         "pc": "pc-26.webp",
@@ -248,15 +268,5 @@
         "pc": "pc-02.webp",
         "tablet": "tablet-02.webp",
         "mobile": "mobile-02.webp"
-    },
-    {
-        "title": "Freedom Studios Academy",
-        "technology": "HTML, CSS",
-        "href": "https://freedom-studios-academy.netlify.app/",
-        "target": "_blank",
-        "rel": "noopener noreferrer",
-        "pc": "pc-01.webp",
-        "tablet": "tablet-01.webp",
-        "mobile": "mobile-01.webp"
     }
 ]
