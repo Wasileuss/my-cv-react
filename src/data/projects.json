@@ -1,7 +1,17 @@
 [
     {
+        "title": "Taylor River",
+        "technology": "HTML, SCSS, JavaScript, Wordpress (ACF-blocks)",
+        "href": "https://taylorriver.webcomplete.io/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "pc": "pc-29.webp",
+        "tablet": "tablet-29.webp",
+        "mobile": "mobile-29.webp"
+    },
+    {
         "title": "Japonés a Fondo",
-        "technology": "HTML, SCSS, JavaScript, Wordpress, ACF-blocks, WooCommerce(custom theme), Polylang",
+        "technology": "HTML, SCSS, JavaScript, Wordpress (ACF-blocks), WooCommerce(custom theme), Polylang",
         "href": "https://staging.japonafondotours.com/",
         "target": "_blank",
         "rel": "noopener noreferrer",
@@ -11,7 +21,7 @@
     },
     {
         "title": "Best AI Tools",
-        "technology": "HTML, SCSS, JavaScript, Wordpress, ACF-blocks",
+        "technology": "HTML, SCSS, JavaScript, Wordpress (ACF-blocks)",
         "href": "https://bestaitools.ai/",
         "target": "_blank",
         "rel": "noopener noreferrer",
@@ -21,7 +31,7 @@
     },
     {
         "title": "CytoSite Bio",
-        "technology": "HTML, SCSS, JavaScript, GSAP, Lottie, Rive, Wordpress, ACF-blocks",
+        "technology": "HTML, SCSS, JavaScript, GSAP, Lottie, Rive, Wordpress (ACF-blocks)",
         "href": "https://cytositebio.com/",
         "target": "_blank",
         "rel": "noopener noreferrer",
@@ -31,7 +41,7 @@
     },
     {
         "title": "High Cadence Growth",
-        "technology": "HTML, SCSS, JavaScript, GSAP, Wordpress, ACF-blocks",
+        "technology": "HTML, SCSS, JavaScript, GSAP, Wordpress (ACF-blocks)",
         "href": "https://highcadencegrowth.webcomplete.io/",
         "target": "_blank",
         "rel": "noopener noreferrer",
@@ -41,7 +51,7 @@
     },
     {
         "title": "Fox & Hearn",
-        "technology": "HTML, SCSS, JavaScript, Wordpress, ACF-blocks",
+        "technology": "HTML, SCSS, JavaScript, Wordpress (ACF-blocks)",
         "href": "https://foxhearn.webcomplete.io/",
         "target": "_blank",
         "rel": "noopener noreferrer",
@@ -51,7 +61,7 @@
     },
     {
         "title": "American PTAC Salers",
-        "technology": "HTML, SCSS, JavaScript, Wordpress, ACF-blocks",
+        "technology": "HTML, SCSS, JavaScript, Wordpress (ACF-blocks)",
         "href": "https://americanptacwholesalers.webcomplete.io/",
         "target": "_blank",
         "rel": "noopener noreferrer",
@@ -61,7 +71,7 @@
     },
     {
         "title": "MASC Bermuda",
-        "technology": "HTML, SCSS, JavaScript, Wordpress, ACF-blocks",
+        "technology": "HTML, SCSS, JavaScript, Wordpress (ACF-blocks)",
         "href": "https://masc.webcomplete.io/",
         "target": "_blank",
         "rel": "noopener noreferrer",
@@ -71,7 +81,7 @@
     },
     {
         "title": "Bermuda Chemist Warehouse",
-        "technology": "HTML, SCSS, JavaScript, Wordpress, ACF-blocks, WooCommerce(custom theme)",
+        "technology": "HTML, SCSS, JavaScript, Wordpress (ACF-blocks), WooCommerce(custom theme)",
         "href": "https://bcw.webcomplete.io/",
         "target": "_blank",
         "rel": "noopener noreferrer",
@@ -81,7 +91,7 @@
     },
     {
         "title": "Alnaaim",
-        "technology": "HTML, SCSS, JavaScript, Wordpress, ACF-blocks",
+        "technology": "HTML, SCSS, JavaScript, Wordpress (ACF-blocks)",
         "href": "https://alnaaim.webcomplete.io/",
         "target": "_blank",
         "rel": "noopener noreferrer",
@@ -91,7 +101,7 @@
     },
     {
         "title": "Studio TPE",
-        "technology": "HTML, SCSS, JavaScript, Wordpress, ACF-blocks",
+        "technology": "HTML, SCSS, JavaScript, Wordpress (ACF-blocks)",
         "href": "https://studio-tpe.webcomplete.io/",
         "target": "_blank",
         "rel": "noopener noreferrer",
@@ -101,7 +111,7 @@
     },
     {
         "title": "Eagle Base",
-        "technology": "HTML, SCSS, JavaScript, Wordpress, ACF-blocks",
+        "technology": "HTML, SCSS, JavaScript, Wordpress (ACF-blocks)",
         "href": "https://eaglec.webcomplete.io/",
         "target": "_blank",
         "rel": "noopener noreferrer",
@@ -111,7 +121,7 @@
     },
     {
         "title": "East Pictures",
-        "technology": "HTML, SCSS, JavaScript, Wordpress, ACF-blocks",
+        "technology": "HTML, SCSS, JavaScript, Wordpress (ACF-blocks)",
         "href": "https://eastc.webcomplete.io/",
         "target": "_blank",
         "rel": "noopener noreferrer",
@@ -121,7 +131,7 @@
     },
     {
         "title": "Beyond Global",
-        "technology": "HTML, SCSS, JavaScript, Wordpress, ACF-blocks",
+        "technology": "HTML, SCSS, JavaScript, Wordpress (ACF-blocks)",
         "href": "https://beyondglobal.webcomplete.io/",
         "target": "_blank",
         "rel": "noopener noreferrer",
@@ -131,7 +141,7 @@
     },
     {
         "title": "Technical Oasis",
-        "technology": "HTML, SCSS, JavaScript, Wordpress, ACF-blocks",
+        "technology": "HTML, SCSS, JavaScript, Wordpress (ACF-blocks)",
         "href": "https://technicaloasis.webcomplete.io/",
         "target": "_blank",
         "rel": "noopener noreferrer",
