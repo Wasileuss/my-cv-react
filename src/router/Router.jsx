@@ -1,39 +1,41 @@
-import { createBrowserRouter } from "react-router"
-import Layout from "../pages/Layout"
-import Home from "../components/About"
-import Projects from "../components/Projects"
-import Courses from "../components/Courses"
-import Contact from "../components/Contact"
-import ErrorPage from "../pages/404"
+import { lazy } from 'react';
+import { createBrowserRouter } from 'react-router';
+import Layout from '../pages/Layout';
+import About from '../components/About';
+import ErrorPage from '../pages/404';
+
+const Courses = lazy(() => import('../components/Courses'));
+const Projects = lazy(() => import('../components/Projects'));
+const Contact = lazy(() => import('../components/Contact'));
 
 const Router = createBrowserRouter([
     {
-        path: "/",
+        path: '/',
         element: <Layout />,
         errorElement: <ErrorPage />,
         children: [
             {
                 index: true,
-                element: <Home />
+                element: <About />,
             },
             {
-                path: "courses",
-                element: <Courses />
+                path: 'courses',
+                element: <Courses />,
             },
             {
-                path: "projects",
-                element: <Projects />
+                path: 'projects',
+                element: <Projects />,
             },
             {
-                path: "contact",
-                element: <Contact />
-            }
-        ]
+                path: 'contact',
+                element: <Contact />,
+            },
+        ],
     },
     {
-        path: "*",
-        element: <ErrorPage />
-    }
-])
+        path: '*',
+        element: <ErrorPage />,
+    },
+]);
 
-export default Router
+export default Router;
