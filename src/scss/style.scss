@@ -1,29 +1,14 @@
-@use "sass:math";
-
-// Мінімальна ширина сторінки
-$minWidth: 320;
-// Ширина полотна (макету)
-$maxWidth: 1440;
-// Ширина обмежуючого контейнера (0 = немає обмеження)
-$maxWidthContainer: 1170;
-// Загальний відступ у контейнера
-// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
-$containerPadding: 30;
-// Ширина спрацьовування першого брейкпоінту
-$containerWidth: $maxWidthContainer + $containerPadding;
-
-@import "_reset.scss";
-@import "_variables.scss";
-@import "_functions.scss";
-@import "_header.scss";
-@import "_sidebar.scss";
-@import "_about.scss";
-@import "_navigation.scss";
-@import "_courses.scss";
-@import "_projects.scss";
-@import "_contact.scss";
-@import "_footer.scss";
-@import "_error-page.scss";
+@use "tools" as *;
+@use "reset";
+@use "header";
+@use "sidebar";
+@use "about";
+@use "navigation";
+@use "courses";
+@use "projects";
+@use "contact";
+@use "footer";
+@use "error-page";
 
 body {
     font-family: 'Montserrat', sans-serif;

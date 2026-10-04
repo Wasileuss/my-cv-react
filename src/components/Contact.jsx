@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 const EmailForm = () => {
     const [statusMessage, setStatusMessage] = useState(null);
@@ -19,12 +19,11 @@ const EmailForm = () => {
     });
 
     const onSubmit = (values, { setSubmitting, resetForm }) => {
-      const serviceId = process.env.REACT_APP_SERVICE_ID;
-      const templateId = process.env.REACT_APP_TEMPLATE_ID;
-      const userId = process.env.REACT_APP_USER_ID;
-      
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-        emailjs.send(serviceId, templateId, values, userId)
+emailjs.send(serviceId, templateId, values, { publicKey })
         .then((response) => {
             console.log('SUCCESS!', response.status, response.text);
             setStatusMessage('Message sent successfully!');

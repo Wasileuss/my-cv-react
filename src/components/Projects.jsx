@@ -1,10 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import projects from '../data/projects.json';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
-const getImagePath = (filename) =>
-  require(`../assets/images/portfolio/${filename}`);
+const images = import.meta.glob('../assets/images/portfolio/*.webp', {
+    eager: true,
+    import: 'default',
+});
+
+const getImagePath = (filename) => images[`../assets/images/portfolio/${filename}`];
 
 const Projects = () => {
     const cardsRef = useRef([]);

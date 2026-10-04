@@ -1,7 +1,7 @@
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { RouterProvider } from 'react-router-dom';
+import { RouterProvider } from 'react-router/dom';
 import Router from './router/Router'
 
 function App() {

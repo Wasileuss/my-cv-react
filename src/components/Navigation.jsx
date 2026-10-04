@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router';
 import { navigation } from '../router/navigation';
 
 const Navigation = ({ isMenuOpen, closeMenu }) => {

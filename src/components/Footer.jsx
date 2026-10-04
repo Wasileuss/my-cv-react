@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import linkedin from '../assets/icons/linkedin.svg';
 import github from '../assets/icons/github.svg';
 // import facebook from '../assets/icons/facebook.svg';

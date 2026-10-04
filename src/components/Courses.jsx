@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import courses from '../data/courses.json';
 
 const Education = () => {
