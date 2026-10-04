@@ -1,4 +1,5 @@
 @use "tools" as *;
+@use "fonts";
 @use "reset";
 @use "header";
 @use "sidebar";
@@ -11,7 +12,7 @@
 @use "error-page";
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', 'Montserrat Fallback', sans-serif;
     color: $clLightGrey;
     // same as the particles background, so there is no white flash before it loads
     background-color: #101720;
