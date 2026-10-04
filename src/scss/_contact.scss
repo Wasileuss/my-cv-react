@@ -61,6 +61,11 @@
         }
     }
 
+    // live region wrapper: must not add an extra flex gap while empty
+    &__status {
+        display: contents;
+    }
+
     &__message {
         padding: toRem(10) toRem(15);
         color: #ffffff;

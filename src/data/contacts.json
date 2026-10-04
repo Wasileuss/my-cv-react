@@ -1,19 +1,22 @@
 [
     {
         "title": "Phone",
+        "icon": "phone",
         "body": "+38 067 711 83 69",
         "href": "tel:+380677118369"
     },
     {
         "title": "Email",
+        "icon": "email",
         "body": "wasyl.lviv@gmail.com",
         "href": "mailto:wasyl.lviv@gmail.com"
     },
     {
         "title": "Telegram",
+        "icon": "telegram",
         "body": "@wasyl_lviv",
         "href": "https://t.me/wasyl_lviv",
         "target": "_blank",
-        "rel": "noreferrer"
+        "rel": "noopener noreferrer"
     }
 ]

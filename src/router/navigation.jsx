@@ -1,18 +1,18 @@
 export const navigation = [
     {
         pageName: 'About',
-        link: '/'
+        link: '/',
     },
     {
         pageName: 'Courses',
-        link: '/courses'
+        link: '/courses',
     },
     {
         pageName: 'Projects',
-        link: '/projects'
+        link: '/projects',
     },
     {
         pageName: 'Contact',
-        link: '/contact'
-    }
-]
+        link: '/contact',
+    },
+];

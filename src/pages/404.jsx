@@ -1,6 +1,9 @@
-import { Link } from "react-router";
+import { Link } from 'react-router';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 const ErrorPage = () => {
+    useDocumentTitle('Page not found');
+
     return (
         <div className="error-page">
             <h1 className="error-page__title">404</h1>
@@ -10,9 +13,11 @@ const ErrorPage = () => {
                 <p>Please check the URL and try again.</p>
                 <p>If the problem persists, please contact me.</p>
             </div>
-            <Link to="/" className="error-page__link">Back to homepage</Link>
+            <Link to="/" className="error-page__link">
+                Back to homepage
+            </Link>
         </div>
     );
-}
+};
 
-export default ErrorPage
+export default ErrorPage;

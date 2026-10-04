@@ -1,29 +1,47 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import logo from '../assets/icons/logo_light.svg';
 import Navigation from './Navigation';
 
+const NAV_ID = 'main-nav';
 
 function Header() {
     const [isMenuOpen, setMenuOpen] = useState(false);
 
-    const handleMenuClick = () => {
-        setMenuOpen(!isMenuOpen);
-    };
-
     useEffect(() => {
-        if (isMenuOpen) {
-            document.body.classList.add('lock');
-        } else {
+        if (!isMenuOpen) return;
+
+        const onKeyDown = (e) => {
+            if (e.key === 'Escape') setMenuOpen(false);
+        };
+
+        document.body.classList.add('lock');
+        document.addEventListener('keydown', onKeyDown);
+
+        return () => {
             document.body.classList.remove('lock');
-        }
+            document.removeEventListener('keydown', onKeyDown);
+        };
     }, [isMenuOpen]);
 
-    return(
-        <header className='header'>
-            <div className ="header__container">
-                <img className='header__logo' src={logo} alt="logo" />
-                <Navigation isMenuOpen={isMenuOpen} handleMenuClick={handleMenuClick} closeMenu={() => setMenuOpen(false)} />
-                <button className={`icon-menu ${isMenuOpen ? 'menu-open' : ''}`} onClick={handleMenuClick}><span></span></button>
+    return (
+        <header className="header">
+            <div className="header__container">
+                <img className="header__logo" src={logo} alt="Vasyl Bezkorovainyi logo" />
+                <Navigation
+                    id={NAV_ID}
+                    isMenuOpen={isMenuOpen}
+                    closeMenu={() => setMenuOpen(false)}
+                />
+                <button
+                    type="button"
+                    className={`icon-menu ${isMenuOpen ? 'menu-open' : ''}`}
+                    onClick={() => setMenuOpen((open) => !open)}
+                    aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+                    aria-expanded={isMenuOpen}
+                    aria-controls={NAV_ID}
+                >
+                    <span></span>
+                </button>
             </div>
         </header>
     );

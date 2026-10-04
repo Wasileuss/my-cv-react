@@ -13,6 +13,8 @@
 body {
     font-family: 'Montserrat', sans-serif;
     color: $clLightGrey;
+    // same as the particles background, so there is no white flash before it loads
+    background-color: #101720;
 
     &.lock {
         overflow: hidden;
@@ -79,5 +81,19 @@ body {
     .lock & {
         position: fixed;
         z-index: 5;
+    }
+}
+:focus-visible {
+    outline: toRem(2) solid #00c191;
+    outline-offset: toRem(3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }

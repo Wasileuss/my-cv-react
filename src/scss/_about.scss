@@ -58,7 +58,11 @@
         overflow: hidden;
     }
 
-    &__animation > div > div {
+    &__animation > span {
+        display: block;
+    }
+
+    &__animation > span > span {
         padding: toRem(2) toRem(15);
         height: toRem(48);
         width: 100%;
@@ -67,19 +71,19 @@
         text-align: center;
     }
 
-    &__animation div:first-child {
+    &__animation span:first-child {
         animation: text-animation 12s infinite;
     }
     
-    &__name div {
+    &__name span {
         background-color: #20a7d889;
     }
     
-    &__technology div {
+    &__technology span {
         background-color: #d06c0085;
     }
     
-    &__position div {
+    &__position span {
         background-color: #00946f86;
     }
 
