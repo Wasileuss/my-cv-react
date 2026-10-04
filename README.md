@@ -49,4 +49,4 @@ src/
 
 ## Deployment
 
-Netlify: build command `npm run build`, publish directory `dist`. SPA routing is handled by `public/_redirects`.
+Vercel: settings (Vite preset, `dist` output, SPA rewrite) live in `vercel.json`.
