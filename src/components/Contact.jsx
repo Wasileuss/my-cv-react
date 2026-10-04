@@ -39,7 +39,8 @@ const Contact = () => {
             );
             setStatus({ type: 'success', text: 'Message sent successfully!' });
             resetForm();
-        } catch {
+        } catch (error) {
+            console.error('EmailJS send failed:', error);
             setStatus({ type: 'error', text: 'Failed to send message. Please try again later.' });
         }
     };
